@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    uploadArchives {
+        configuration = configurations.archives
+        repositories {
+            mavenDeployer {
+//                snapshotRepository(url: MAVEN_SNAPSHOT_URL) {
+//                    authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+//                }
+                repository(url: 'file:///Users/yizheng.deng/macaca/ShareSDKForAndroid') {
+                    authentication(userName: 'hahaha', password: 'hahaha')
+                }
+                pom.project {
+                    //版本，有更新时修改版本号，在上传
+                    version '1.0.5'
+                    //名字
+                    artifactId 'common-share'
+                    groupId 'com.dvd.seller'
+                    packaging 'aar'
+                    description 'shareService'
+
+                }
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

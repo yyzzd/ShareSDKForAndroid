@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_to_share_qq"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="分享到QQ" />
+
+    <TextView
+        android:id="@+id/tv_to_share_q_zone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="分享到QQ空间" />
+
+    <TextView
+        android:id="@+id/tv_to_share_wx"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="分享到微信" />
+
+    <TextView
+        android:id="@+id/tv_to_share_wx_moment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#e1e1e1"
+        android:gravity="center"
+        android:text="分享到微信朋友圈" />
+</LinearLayout>
